@@ -1,0 +1,16 @@
+let str="  Hello this is javascript tutorial"
+let str1="kundan"
+console.log(str.replaceAll("t","*"))
+console.log(str.lastIndexOf("a"))
+console.log(str.slice(2,9))
+console.log(str.slice(-5,-1))
+console.log(str)
+console.log(str.trimStart())
+console.log(str.trimEnd())
+console.log(str.concat(str1))
+console.log(str.toUpperCase())
+console.log(str.toLowerCase())
+console.log(str.endsWith("l"))
+console.log(str.startsWith(" "))
+console.log(str1.repeat(5))
+console.log(str.valueOf())
