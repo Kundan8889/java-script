@@ -2,27 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js tutorial</title>
 </head>
 <body>
-    <script>
-        const div=document.createElement('div');
-        console.log(div);
-        div.className='main'
-        div.id=Math.round(Math.random()*10+1)
-        // setAttribute:->directly ush values ko insert karta hain to ek rounded bachta hain vha pr
-       div.setAttribute("title","generated title")
-      div.style.backgroundColor="red"
-       div.style.padding="12px"
-        //hamne stylish kardi but show kyo nhi horahi?
-        //hamne div create kiya vo div abhi memory ke andr hain
-        div.innerText="this is innner text" //innerText:jo bhi value h ushke refrence  select karta hain fir ushke baad override karega
-        //ya
-      const addText=document.createTextNode("hello boys and girls")
-       div.appendChild(addText)
-       document.body.appendChild(div)
-        
-    </script>
+    
 </body>
+<script>
+    const div=document.createElement('div');
+    console.log(div);
+   div.className='main'
+    div.id=Math.round(Math.random()*10+1)
+    // setAttribute:->directly ush values ko insert karta hain to ek rounded bachta hain vha pr
+  div.setAttribute("title","generated title")
+  div.style.backgroundColor="red"
+   div.style.padding="12px"
+    //hamne stylish kardi but show kyo nhi horahi?
+    //hamne div create kiya vo div abhi memory ke andr hain
+   div.innerText="this is innner text" //innerText:jo bhi value h ushke refrence  select karta hain fir ushke baad override karega
+    //ya
+  const addText=document.createTextNode("hello boys and girls")
+  div.appendChild(addText)
+   document.body.appendChild(div)
+    
+</script>
 </html>

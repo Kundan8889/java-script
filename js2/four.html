@@ -16,10 +16,10 @@
         li.innerHTML=`${langName}`
         document.querySelector('.language').appendChild(li)
     }
-    addLanguage('python')
-    addLanguage('typesript')
+   addLanguage('python')
+   addLanguage('typesript')
     //optimize way me problem solve kar rahe
-    function addOptiLanguage(langName){
+     function addOptiLanguage(langName){
         const li=document.createElement('li')
         li.appendChild(document.createTextNode(langName))
         document.querySelector('.language').appendChild(li)
@@ -27,14 +27,14 @@
     addOptiLanguage('java')
 
     //Edit
-    const secondLang=document.querySelector('li:nth-child(2)')
+ const secondLang=document.querySelector('li:nth-child(2)')
+ console.log(secondLang);
     const newli=document.createElement('li')
     //textContent and innerHTML me itna koi khash antar nhi aane vala
     newli.textContent="Mojo"
     secondLang.replaceWith(newli)
-
     //Edit
-    const firstLang=document.querySelector('li:nth-child(2)')
+     const firstLang=document.querySelector('li:nth-child(2)')
     //ham pura ka pura outer html change kar sakte hain
     firstLang.outerHTML='<li>TypeScript</li>'
 
