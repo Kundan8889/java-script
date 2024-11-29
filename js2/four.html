@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,4 +42,51 @@
     const lastLang=document.querySelector('li:last-child')
     lastLang.remove()
 </script> 
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Counter</title>
+    <style>
+        #counter {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #005663;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Simple Counter</h2>
+    <div id="counter">0</div>
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var count   
+ = 0;
+            $('#counter').text(count);
+
+            $('#increment').click(function() {
+                count++;
+                $('#counter').text(count);
+            });
+
+            $('#decrement').click(function() {
+                if (count > 0) {
+                    count--;
+                    $('#counter').text(count);
+                }
+            });
+        });
+    </script>
+</body>
 </html>

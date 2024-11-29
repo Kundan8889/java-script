@@ -19,9 +19,7 @@ if (playGame) {
         validatesGuess(guess)
     })
 }
-
 function validatesGuess(guess) {
-
     if (isNaN(guess)) {
         alert(" please enter a valid number ")
     }

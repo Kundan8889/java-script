@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listern</title>
+</head>
+<body style="background-color: #414141;color:aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="./photoshop.jpg" alt=""></li>
+            <li><img width="200px" id="japan" src="./japan.jpg" alt=""></li>
+            <li><img width="200px" id="river" src="./river.jpg" alt=""></li>
+            <li><img width="200px" id="owl"  src="./own.jpg" alt=""></li> <!--onclick="alert('own')"-->
+            <li><img width="200px" id="prayer"  src="./prayer.jpg" alt=""></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+           
+        </ul>
+    </div>
+</body>
+<script>
+ //   document.getElementById('owl').onclick=function(){
+    //    alert("owl clicked")
+// }
+
+//document.getElementById('owl').addEventListener('click',function(){
+  //  alert("owl clicked again")
+
+//attachEvent()
+//jquery-on
+
+//we will learn:
+//type,timestamp,defaultPrevented
+//target,toElemnt,srcElement,currentTarget,
+//clientX,clientY,screenX,screeY
+//altKey,ctrKey,shiftKey,KeyCode
+
+document.getElementById('images').addEventListener('click',function(e){
+   console.log("clicked inside the ul")
+});
+//EventPropogation:bubbling-bubble niche se upar jata hain to,jo bhi elemnt ya jo bhi script track kar rahi hain bade element ko inside se outside to vo EventPropogation hota hain
+ /*document.getElementById('owl').addEventListener('click',function(e){
+    console.log("own clicked")
+    e.stopPropagation()
+ });
+  document.getElementById('google').addEventListener('click',function(e){
+      e.preventDefault();
+      e.stopPropagation()
+    console.log("google clicked") },false) */
+
+    document.querySelector('#images').addEventListener('click',function(e){
+       // console.log(e.target.parentNode);
+       console.log(e.target.tagName);
+        let removeIt=e.target.parentNode;
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+        }
+        removeIt.remove()
+       // removeIt.parentNode.removeChild(removeIt)
+    })
+  
+</script>
+</html>
